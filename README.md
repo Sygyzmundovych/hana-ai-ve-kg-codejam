@@ -1,4 +1,4 @@
-# SAP-samples/repository-template
+# CodeJam - Getting Started with AI (Vector Engine, NLP, Knowledge Graph) using SAP HANA and Python
 This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
 
 # Containing Files
@@ -20,7 +20,9 @@ Please edit this file as it is the primary description file for your project. Yo
 -->
 
 ## Description
-<!-- Please include SEO-friendly description -->
+This repository contains the material for the CodeJam on "Getting Started with AI using SAP HANA and Python".
+
+In this CodeJam you will learn how the AI processes are supported using SQL and a Python Client for SAP HANA Cloud.
 
 ## Requirements
 
