@@ -151,7 +151,7 @@ In your BAS hide the terminal.
 
 ![Hide the terminal](img/setup0108.png)
 
-Go to Explorer and open a [`scripts/01-check_setup.ipynb`](scripts/01-check_setup.ipynb) notebook. 
+Go to Explorer and open a [`scripts/01-check_setup.ipynb`](../01-check_setup.ipynb) notebook. 
 
 The notebook should open in a Jupyter extension.
 
