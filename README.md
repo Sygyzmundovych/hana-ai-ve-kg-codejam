@@ -1,40 +1,59 @@
-# CodeJam - Getting Started with AI (Vector Engine, NLP, Knowledge Graph) using SAP HANA and Python
-This default template for SAP Samples repositories includes files for README, LICENSE, and .reuse/dep5. All repositories on github.com/SAP-samples will be created based on this template.
+# CodeJam - Getting Started with AI (Vector Engine, NLP, Knowledge Graph[soon]) using SAP HANA and Python
 
-# Containing Files
+This repository contains the material for the CodeJam on "Getting Started with AI (Vector Engine, NLP) using SAP HANA and Python".
 
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The .reuse/dep5 file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the .reuse/dep5 in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-# [Title]
-<!-- Please include descriptive title -->
-
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
--->
-
-## Description
-This repository contains the material for the CodeJam on "Getting Started with AI using SAP HANA and Python".
-
-In this CodeJam you will learn how the AI processes are supported using SQL and a Python Client for SAP HANA Cloud.
+In this CodeJam you will learn how SAP HANA Cloud support development of GenAI applications.
 
 ## Requirements
 
-## Download and Installation
+The requirements necessary to complete the exercises in this repository, including hardware and software specifications, are outlined in the [prerequisites](prerequisites.md) file.
+
+### Material organization
+
+The material comprises a series of exercises, with each exercise being a Jupyter notebook to be executed.
+
+### Following the exercises
+
+During the CodeJam, you will complete each exercise one at a time. Within each exercise, there are discussion points to be discussed upon with the entire CodeJam class, facilitated by the instructor and marker using the notation "🤓 **Let's discuss**".
+
+If you complete any exercise ahead of others, kindly refrain from moving on to the next one. Instead, take the opportunity to delve deeper into what you've just accomplished and explore additional aspects of the covered subject matter. This approach ensures that we all progress together and can derive additional value through reflection via the questions (and answers).
+
+### The exercises
+
+Here's an overview of the exercises in this CodeJam.
+
+> Make certain that you have successfully completed all the [prerequisites](prerequisites.md)
+
+Setup:
+
+* [Setup SAP Business Application Studio and a dev space](scripts/00-setup/setup-bas.md)
+
+GenAI FUndamentals:
+
+1. [Check your setup](scripts/01-check_setup.ipynb)
+1. [Latent space](scripts/02-colors)
+1. [Text processing in SAP HANA Cloud](scripts/05-NHTSA)
+1. [SAP HANA community contribution in LangChain](scripts/08-rag_naive)
 
 ## Known Issues
-<!-- You may simply state "No known issues. -->
+Not known issues as of now.
+
+## Feedback
+
+If you can spare a couple of minutes at the end of the session, please help me improve for next time by giving me some feedback.
+
+Simply use this [Give Feedback](https://github.com/SAP-samples/hana-ml-py-codejam/issues/new?assignees=&labels=feedback&template=session-feedback-template.md&title=Feedback) link to create a special "feedback" issue, and follow the instructions in there.
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
- 
-For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
+
+[Create an issue](https://github.com/SAP-samples/hana-ml-py-codejam/issues) in this repository if you find a bug or have questions about the content.
+
+For additional support, [ask a question in SAP Community using `SAP HANA` tag](https://answers.sap.com/questions/ask.html?primaryTagId=73554900100700000996).
+
+## Further connections and information
+
+Here are a few pointers to resources for further connections and information:
+- Check the HANA ML samples repository: https://github.com/SAP-samples/hana-ml-samples
 
 ## Contributing
 If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
