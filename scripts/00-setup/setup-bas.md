@@ -125,7 +125,7 @@ python -m pip install --require-virtualenv ipykernel
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies listed in https://help.sap.com/doc/cd94b08fe2e041c2ba778374572ddba9/2024_1_QRC/en-US/Installation.html#installation-guide using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'hana-ml<2.24' python-dotenv
+python -m pip install --require-virtualenv -U 'hana-ml<2.24' 'python-dotenv'
 ```
 
 ![Install hana-ml and dependencies](img/setup0100.png)
@@ -133,7 +133,7 @@ python -m pip install --require-virtualenv -U 'hana-ml<2.24' python-dotenv
 3. Install Jupyter's own [utilities for programmatic work with notebook documents](https://docs.jupyter.org/en/latest/projects/conversion.html): `nbformat` to be able to run one notebook from another, and `nbconvert` to be able to clean the output of notebooks, eg. before pushing to the Git repository, using the following command:
 
 ```shell
-python -m pip install --require-virtualenv nbformat nbconvert
+python -m pip install --require-virtualenv 'nbformat' 'nbconvert'
 ```
 
 ![Install nbformat and nbconvert](img/setup0102.png)
@@ -141,9 +141,8 @@ python -m pip install --require-virtualenv nbformat nbconvert
 4. Install the [LangChain Community](https://pypi.org/project/langchain-community/) that contains third-party integrations, incl. SAP HANA, and the remaining required dependencies using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'langchain-community<0.4' 'markdownify<0.15' 'webcolors<24.12'
+python -m pip install --require-virtualenv -U 'langchain-community<0.4' 'Markdown<3.8' 'markdownify<0.15' 'webcolors<24.12'
 ```
-
 
 ## [10/10] Open the "Check Setup" notebook from the exercises
 
