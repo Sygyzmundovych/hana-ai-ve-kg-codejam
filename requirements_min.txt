@@ -2,7 +2,7 @@
 hana-ml<2.24
 ipykernel<7
 langchain-community<0.4
+Markdown<3.8
 markdownify<0.14
-nbformat
-#unstructured==0.16.17
+nbconvert
 webcolors<24.12
