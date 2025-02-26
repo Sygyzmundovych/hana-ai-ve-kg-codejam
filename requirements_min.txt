@@ -1,10 +1,8 @@
 #GitPython==3.1.44
-hana-ml==2.23.25010300
-ipykernel==6.29.5
-langchain-community==0.3.15
-markdownify==0.14.1
-nbformat==5.10.4
-pip==25.0
-setuptools==65.5.0
+hana-ml<2.24
+ipykernel<7
+langchain-community<0.4
+markdownify<0.14
+nbformat
 #unstructured==0.16.17
-webcolors==24.11.1
+webcolors<24.12
