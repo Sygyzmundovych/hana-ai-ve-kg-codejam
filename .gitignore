@@ -4,6 +4,7 @@ user*.ini
 .vscode/settings.json
 .DS_Store
 myrecords.pkl
+image_embeddings.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
