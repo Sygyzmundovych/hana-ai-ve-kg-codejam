@@ -125,7 +125,7 @@ python -m pip install --require-virtualenv ipykernel
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies listed in https://help.sap.com/doc/cd94b08fe2e041c2ba778374572ddba9/2024_1_QRC/en-US/Installation.html#installation-guide using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'hana-ml<2.24' 'python-dotenv'
+python -m pip install --require-virtualenv -U 'hana-ml<2.24' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
 ```
 
 ![Install hana-ml and dependencies](img/setup0100.png)
