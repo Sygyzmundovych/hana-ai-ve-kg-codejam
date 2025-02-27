@@ -3,6 +3,7 @@
 user*.ini
 .vscode/settings.json
 .DS_Store
+myrecords.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
