@@ -122,7 +122,7 @@ python -m pip install --require-virtualenv -U 'ipykernel' 'ipython<9'
 
 ![Install ipykernel](img/setup0090.png)
 
-2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies listed in https://help.sap.com/doc/cd94b08fe2e041c2ba778374572ddba9/2024_1_QRC/en-US/Installation.html#installation-guide using the following command:
+2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies using the following command:
 
 ```shell
 python -m pip install --require-virtualenv -U 'hana-ml<2.24' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
@@ -141,7 +141,7 @@ python -m pip install --require-virtualenv 'nbformat' 'nbconvert'
 4. Install the [LangChain Community](https://pypi.org/project/langchain-community/) that contains third-party integrations, incl. SAP HANA, and the remaining required dependencies using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'langchain-community<0.4' 'Markdown<3.8' 'markdownify<0.15' 'webcolors<24.12'
+python -m pip install --require-virtualenv -U 'langchain-community<0.4' 'Markdown<3.8' 'markdownify<0.15' 'webcolors<24.12' 'pillow'
 ```
 
 ## [10/10] Open the "Check Setup" notebook from the exercises
