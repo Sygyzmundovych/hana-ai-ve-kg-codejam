@@ -117,7 +117,7 @@ Install:
 1. the `ipykernel` package to be able to run Python code in a Jupyter extension using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'ipykernel' 'ipython<9'
+python -m pip install --require-virtualenv -U 'ipykernel' 'ipython'
 ```
 
 ![Install ipykernel](img/setup0090.png)
@@ -125,7 +125,7 @@ python -m pip install --require-virtualenv -U 'ipykernel' 'ipython<9'
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'hana-ml<2.24' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
+python -m pip install --require-virtualenv -U 'hana-ml<2.26' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
 ```
 
 ![Install hana-ml and dependencies](img/setup0100.png)
@@ -141,7 +141,7 @@ python -m pip install --require-virtualenv 'nbformat' 'nbconvert'
 4. Install the [LangChain Community](https://pypi.org/project/langchain-community/) that contains third-party integrations, incl. SAP HANA, and the remaining required dependencies using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'langchain-community<0.4' 'Markdown<3.8' 'markdownify<0.15' 'webcolors<24.12' 'pillow'
+python -m pip install --require-virtualenv -U 'langchain-community<0.4' 'Markdown' 'markdownify' 'webcolors' 'pillow'
 ```
 
 ## [10/10] Open the "Check Setup" notebook from the exercises
