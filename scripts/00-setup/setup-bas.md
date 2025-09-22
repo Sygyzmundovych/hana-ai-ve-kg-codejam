@@ -16,23 +16,23 @@ Should you have issues opening SAP Business Application Studio (for example when
 
 Go to your instance of SAP Business Application Studio (further referred to as "BAS").
 
-For this SAP CodeJam exercise create a new Dev Space called `CodeJamHANAML` of a kind **Basic** with an additional extension **Python Tools** in BAS:
+For this SAP CodeJam exercise create a new Dev Space called `CodeJamHANAAI` of a kind **Basic** with an additional extension **Python Tools** in BAS:
 
 |Screen element|Value|
 |-|-|
-|Dev Space name|`CodeJamHANAML`|
+|Dev Space name|`CodeJamHANAAI`|
 |Kind|**Basic**|
 |Additional extension|**Python Tools**|
 
-![Create a Dev Space](img/setup0021.png)
+![Create a Dev Space](img/setup0021hanaai.png)
 
 You should see the dev space **STARTING**.
 
-![Dev Space is Starting](img/setup0023.png)
+![Dev Space is Starting](img/setup0023hanaai.png)
 
 Wait for the dev space to get into the **RUNNING** state and then open that dev space.
 
-![Dev Space is Running](img/setup0026.png)
+![Dev Space is Running](img/setup0026hanaai.png)
 
 ## [4/10] Clone the exercises from the Git repository
 
@@ -56,13 +56,13 @@ The cloned repository contains a file `codejam.code-workspace` and therefore you
 
 If you missed the previous dialog, then you can go to the BAS Explorer, click on the `codejam.code-workspace` file, and then click on the **Open Workspace**.
 
-![Open a workspace](img/setup0045.png)
+![Open a workspace](img/setup0045hanaai.png)
 
 You should see:
 * **CODEJAM** as the workspace at the root of the hierarchy of the project, and
 * **`hana-ai-ve-kg-codejam`** as the name of the top level folder.
 
-![Open a workspace](img/setup0047.png)
+![Open a workspace](img/setup0047hanaai.png)
 
 ## [6/10] Check that the required extensions are installed
 
@@ -87,28 +87,28 @@ Make sure you are in the `/home/user/projects/hana-ai-ve-kg-codejam` directory, 
 Use `venv` to create a virtual environment for your project in the new directory `~/projects/hana-ai-ve-kg-codejam/env` by using the following command:
 
 ```shell
-python3 -m venv ~/projects/hana-ai-ve-kg-codejam/env --upgrade-deps
+python3 -m venv ~/projects/hana-ai-ve-kg-codejam/.venv --upgrade-deps
 ```
 
 Check that the virtual environment was successfully created:
 
 ```shell
-ls -l ~/projects/hana-ai-ve-kg-codejam/env
+ls -l ~/projects/hana-ai-ve-kg-codejam/.venv
 ```
 
 ![Create an venv](img/setup0071.png)
 
-## [8/10] Activate the virtual environment `env` from a command line
+## [8/10] Activate the virtual environment `.venv` from a command line
 
 Activate the virtual environment using the following command:
 
 ```shell
-source ~/projects/hana-ai-ve-kg-codejam/env/bin/activate
+source ~/projects/hana-ai-ve-kg-codejam/.venv/bin/activate
 ```
 
-You should see you are in a virtual environment as indicated by the `(env)` prefix in a shell's prompt.
+You should see you are in a virtual environment as indicated by the `(.venv)` prefix in a shell's prompt.
 
-![Activate the venv](img/setup0080.png)
+![Activate the venv](img/setup0080hanaai.png)
 
 ## [9/10] Install required Python packages in the virtual environment
 
@@ -117,18 +117,16 @@ Install:
 1. the `ipykernel` package to be able to run Python code in a Jupyter extension using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'ipykernel' 'ipython'
+python -m pip install --require-virtualenv -U 'ipykernel'
 ```
 
-![Install ipykernel](img/setup0090.png)
+![Install ipykernel](img/setup0090hanaai.png)
 
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'hana-ml<2.26' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
+python -m pip install --require-virtualenv -U 'hana-ml<2.27' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
 ```
-
-![Install hana-ml and dependencies](img/setup0100.png)
 
 3. Install Jupyter's own [utilities for programmatic work with notebook documents](https://docs.jupyter.org/en/latest/projects/conversion.html): `nbformat` to be able to run one notebook from another, and `nbconvert` to be able to clean the output of notebooks, eg. before pushing to the Git repository, using the following command:
 
@@ -136,12 +134,10 @@ python -m pip install --require-virtualenv -U 'hana-ml<2.26' 'python-dotenv' 'sq
 python -m pip install --require-virtualenv 'nbformat' 'nbconvert'
 ```
 
-![Install nbformat and nbconvert](img/setup0102.png)
-
-4. Install the [LangChain Community](https://pypi.org/project/langchain-community/) that contains third-party integrations, incl. SAP HANA, and the remaining required dependencies using the following command:
+4. Install the [LangChain integration for SAP HANA Cloud](https://pypi.org/project/langchain-hana/) that integrates LangChain with SAP HANA Cloud to make use of vector search, knowledge graph, and further in-database capabilities as part of LLM-driven applications, plus the remaining required dependencies using the following command:
 
 ```shell
-python -m pip install --require-virtualenv -U 'langchain-community<0.4' 'Markdown' 'markdownify' 'webcolors' 'pillow'
+python -m pip install --require-virtualenv -U 'langchain-hana' 'Markdown' 'markdownify' 'webcolors' 'pillow'
 ```
 
 ## [10/10] Open the "Check Setup" notebook from the exercises
@@ -154,7 +150,7 @@ Go to Explorer and open a [`scripts/01-check_setup.ipynb`](../01-check_setup.ipy
 
 The notebook should open in a Jupyter extension.
 
-Next, select a kernel `env` (the virtual environment you set up earlier) from **Python Environments**.
+Next, select a kernel `.venv` (the virtual environment you set up earlier) from **Python Environments**.
 
 ![Select the kernel](img/setup0111.png)
 
