@@ -7,7 +7,7 @@ from langchain.schema import Document
 class CustomSAPBlogLoader(BaseLoader):
     """Custom LangChain Loader for SAP Community Blogs"""
 
-    HEADERS = {"User-Agent": requests.get("https://httpbin.org/user-agent").json()["user-agent"]}
+    HEADERS = {"User-Agent": requests.get("https://httpbingo.org/user-agent").json()["user-agent"]}
 
     def __init__(self, urls):
         """Initialize with a list of URLs."""
