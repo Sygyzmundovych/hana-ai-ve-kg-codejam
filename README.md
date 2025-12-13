@@ -36,8 +36,6 @@ GenAI Fundamentals:
 1. [Latent space](scripts/02-colors)
 1. [FAQ Search](scripts/01-faq-search/)
 1. [Text processing in SAP HANA Cloud](scripts/05-NHTSA)
-1. [SAP HANA community contribution in LangChain - VE](scripts/08-langchain-hana-ve)
-1. [SAP HANA community contribution in LangChain - KGE](scripts/09-langchain-hana-kge)
 
 ## Known Issues
 Not known issues as of now.
