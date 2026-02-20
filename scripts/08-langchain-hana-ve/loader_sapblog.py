@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
-from langchain.document_loaders.base import BaseLoader
-from langchain.schema import Document
+from langchain_core.document_loaders import BaseLoader
+from langchain_core.documents import Document
 
 class CustomSAPBlogLoader(BaseLoader):
     """Custom LangChain Loader for SAP Community Blogs"""
@@ -22,13 +22,13 @@ class CustomSAPBlogLoader(BaseLoader):
         response = requests.get(url, headers=self.HEADERS)
 
         if response.status_code != 200:
-            return f"❌ Failed to fetch URL: {url}"
+            raise ValueError(f"❌ Failed to fetch URL: {url} due to the HTTP status code {response.status_code}")
 
         soup = BeautifulSoup(response.content, "html.parser")
         main_body = soup.find("div", class_="lia-message-body")
 
         if not main_body:
-            return f"❌ Failed to extract article content from: {url}"
+            raise ValueError(f"❌ Failed to extract article content from: {url}")
 
         structured_text = md(
             str(main_body),
