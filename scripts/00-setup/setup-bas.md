@@ -125,27 +125,26 @@ You should see you are in a virtual environment as indicated by the `(.venv)` pr
 
 Install:
 
-1. the `ipykernel` package to be able to run Python code in a Jupyter extension using the following command:
+1. the `ipykernel` package to be able to run Python code in a Jupyter extension plus Jupyter's own [utilities for programmatic work with notebook documents](https://docs.jupyter.org/en/latest/projects/conversion.html): `nbformat` to be able to run one notebook from another, and `nbconvert` to be able to clean the output of notebooks, eg. before pushing to the Git repository,  using the following command:
 
     ```shell
-    python -m pip install --require-virtualenv -U 'ipykernel'
+    python -m pip install --require-virtualenv -U 'ipykernel' 'nbformat' 'nbconvert'
     ```
 
-![Install ipykernel](img/setup0090hanaai.png)
+![Install ipykernel](img/setup0091hanaai.png)
 
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies using the following command:
 
     ```shell
-    python -m pip install --require-virtualenv -U 'hana-ml<2.27' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
+    python -m pip install --require-virtualenv -U 'hana-ml<2.27' 'python-dotenv' 'sqlalchemy-hana' 'jupysql'
     ```
 
-3. Install Jupyter's own [utilities for programmatic work with notebook documents](https://docs.jupyter.org/en/latest/projects/conversion.html): `nbformat` to be able to run one notebook from another, and `nbconvert` to be able to clean the output of notebooks, eg. before pushing to the Git repository, using the following command:
+    > JFYI: To use with the old `'ipython-sql'` instead of the new and supported `jupysql'`, you would need to import `'prettytable<3.12'`
+    >    ```shell
+    >    python -m pip install --require-virtualenv -U 'hana-ml<2.27' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
+    >    ```
 
-    ```shell
-    python -m pip install --require-virtualenv -U 'nbformat' 'nbconvert'
-    ```
-
-4. Install the [LangChain integration for SAP HANA Cloud](https://pypi.org/project/langchain-hana/) that integrates LangChain with SAP HANA Cloud to make use of vector search, knowledge graph, and further in-database capabilities as part of LLM-driven applications, plus the remaining required dependencies using the following command:
+3. Install the [LangChain integration for SAP HANA Cloud](https://pypi.org/project/langchain-hana/) that integrates LangChain with SAP HANA Cloud to make use of vector search, knowledge graph, and further in-database capabilities as part of LLM-driven applications, plus the remaining required dependencies using the following command:
 
     ```shell
     python -m pip install --require-virtualenv -U 'langchain-hana' 'Markdown' 'markdownify' 'webcolors' 'pillow'
