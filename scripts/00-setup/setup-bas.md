@@ -164,14 +164,12 @@ In your BAS hide the terminal.
 
 ![Hide the terminal](img/setup0108.png)
 
-Go to Explorer and open a [`scripts/01-check_setup.ipynb`](../01-check_setup.ipynb) notebook. 
-
-The notebook should open in a Jupyter extension.
+Go to Explorer and open a `scripts/01-check_setup.ipynb` notebook.
 
 Check that the kernel of the notebook is set to `.venv` (the virtual environment you set up earlier).
 
 ![Select the kernel](img/setup0112.png)
 
-## 🤓 Now you are ready to use SAP Business Application Studio to go one-by-one through exercises! 
+## 🤓 Now you are ready to use SAP Business Application Studio to go one-by-one through [exercises](../../README.md#the-exercises) 
 
 ### Engage, learn and enjoy!
