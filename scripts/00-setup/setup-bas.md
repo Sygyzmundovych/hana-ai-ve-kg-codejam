@@ -40,7 +40,7 @@ Once your dev space is open in the BAS, use one of the available options to clon
 ```sh
 https://github.com/Sygyzmundovych/hana-ai-ve-kg-codejam.git
 ```
-☝🏻 into your `project` directory in the BAS Dev Space.
+☝🏻 into your `/home/user/projects/` directory in the BAS Dev Space.
 
 ![Clone the repo](img/setup0030.png)
 
@@ -48,18 +48,20 @@ Click **Open** to open a project in the Explorer view.
 
 ![Open a project](img/setup0040.png)
 
+If you cloned the repository properly, it should be available in the folder `/home/user/projects/hana-ai-ve-kg-codejam` in your BAS Dev Space.
+
 ## [5/11] Open the Workspace
 
 The cloned repository contains a file `codejam.code-workspace` and therefore you will be asked, if you want to open it. Click **Open Workspace**.
 
 ![Automatic notification to open a workspace](img/setup0042.png)
 
-If you missed the previous dialog, then you can go to the BAS Explorer, click on the `codejam.code-workspace` file, and then click on the **Open Workspace**.
+<u>If you missed the previous dialog</u>, then you can go to the BAS Explorer, click on the `codejam.code-workspace` file, and then click on the **Open Workspace** button.
 
 ![Open a workspace](img/setup0045hanaai.png)
 
 You should see:
-* **CODEJAM** as the workspace at the root of the hierarchy of the project, and
+* **CODEJAM** as the name of the workspace at the root of the hierarchy of the project, and
 * **`hana-ai-ve-kg-codejam`** as the name of the top level folder.
 
 ![Open a workspace](img/setup0047hanaai.png)
@@ -73,6 +75,10 @@ Go to **Extensions** using the activity bar (the left-most bar in the IDE) and t
 You should see **Python** and **Jupyter** extensions installed already. If you do not, then you might have missed selecting **Python Tools** as an additional extension, when created a dev space.
 
 ![Extensions to install](img/setup0051.png)
+
+👉 If you want to learn more about Python in SAP Business Application Studio: https://community.sap.com/t5/technology-blog-posts-by-sap/using-python-in-sap-business-application-studio-my-notes/ba-p/14155516
+
+👉 If you want to learn more about Jupyter in SAP Business Application Studio: https://community.sap.com/t5/technology-blog-posts-by-sap/using-jupyter-in-sap-business-application-studio-my-notes/ba-p/14167294
 
 ## [7/11] Disable "Exposing router ports" extension
 
@@ -109,6 +115,8 @@ ls -l ~/projects/hana-ai-ve-kg-codejam/.venv
 
 ![Create an venv](img/setup0071.png)
 
+👉 If you want to learn more about Python in SAP Business Application Studio: https://community.sap.com/t5/technology-blog-posts-by-sap/using-python-in-sap-business-application-studio-my-notes/ba-p/14155516
+
 ## [9/11] Activate the virtual environment `.venv` from a command line
 
 Activate the virtual environment using the following command:
@@ -136,10 +144,10 @@ Install:
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies using the following command:
 
     ```shell
-    python -m pip install --require-virtualenv -U 'hana-ml<2.28' 'python-dotenv' 'sqlalchemy-hana' 'jupysql'
+    python -m pip install --require-virtualenv -U 'hana-ml<2.29' 'python-dotenv' 'sqlalchemy-hana' 'jupysql' 'pandas<3'
     ```
 
-    > JFYI: To use with the old `'ipython-sql'` instead of the new and supported `jupysql'`, you would need to import `'prettytable<3.12'` to make it working properly:
+    > Just FYI: To use with the old `'ipython-sql'` instead of the new and supported `'jupysql'`, you would need to import `'prettytable<3.12'` to make it working properly:
     >    ```shell
     >    python -m pip install --require-virtualenv -U 'hana-ml<2.28' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
     >    ```
