@@ -1,0 +1,84 @@
+@prefix :        <http://developers.sap.com/onto/teched2025#> .
+@prefix dev:     <http://developers.sap.com/> .
+@prefix schema:  <http://schema.org/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Ontology header
+#################################################################
+
+# <http://developers.sap.com/onto/teched2025>
+#   a owl:Ontology ;
+#   rdfs:label "TechEd 2025 Developer Keynote Ontology (minimal)" ;
+#   rdfs:comment "Minimal TBox describing classes and properties used by the teched2025_devkeynote named graph." .
+
+#################################################################
+# Classes (reuse schema.org classes actually used in the data)
+#################################################################
+
+schema:Person               a owl:Class .
+schema:Event                a owl:Class .
+schema:Service              a owl:Class .
+schema:SoftwareApplication  a owl:Class .
+schema:Country              a owl:Class .
+
+#################################################################
+# Datatype properties actually used
+#################################################################
+
+schema:name
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;              # broad as per schema.org usage
+  rdfs:range  xsd:string .
+
+schema:jobTitle
+  a owl:DatatypeProperty ;
+  rdfs:domain schema:Person ;
+  rdfs:range  xsd:string .
+
+#################################################################
+# Object properties — specialize where your data is stricter
+#################################################################
+
+# Country assignment for people
+schema:addressCountry
+  a owl:ObjectProperty ;
+  rdfs:domain schema:Person ;
+  rdfs:range  schema:Country .
+
+# Performers for events (you only use persons as performers)
+schema:performer
+  a owl:ObjectProperty ;
+  rdfs:domain schema:Event ;
+  rdfs:range  schema:Person .
+
+# Your events are specifically about capabilities (services),
+# so we define a specialized subproperty to reflect that.
+# :demoAboutCapability
+#   a owl:ObjectProperty ;
+#   rdfs:label "demo about capability" ;
+#   rdfs:subPropertyOf schema:about ;
+#   rdfs:domain schema:Event ;
+#   rdfs:range  schema:Service .
+
+# # Your capabilities (services) are provided by software applications
+# # in the data. This is stricter than generic schema:provider, so we
+# # model it as a subproperty with a narrowed range.
+# :capabilityProvidedByProduct
+#   a owl:ObjectProperty ;
+#   rdfs:label "capability provided by product" ;
+#   rdfs:subPropertyOf schema:provider ;
+#   rdfs:domain schema:Service ;
+#   rdfs:range  schema:SoftwareApplication .
+
+#################################################################
+# Helpful labels (optional, minimal)
+#################################################################
+
+# schema:Person               rdfs:label "Person" .
+# schema:Event                rdfs:label "Event" .
+# schema:Service              rdfs:label "Service (Capability)" .
+# schema:SoftwareApplication  rdfs:label "Software Application (Product)" .
+# schema:Country              rdfs:label "Country" .
