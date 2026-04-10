@@ -31,11 +31,15 @@ Setup:
 GenAI Fundamentals:
 
 1. [Check your setup](scripts/01-check_setup.ipynb)
-1. [Word2Vec](scripts/03-word2vec/)
-1. [Images similarity](scripts/04-images/)
-1. [Latent space](scripts/02-colors)
-1. [FAQ Search](scripts/01-faq-search/)
-1. [Text processing in SAP HANA Cloud](scripts/05-NHTSA)
+1. [HANA Embedded Machine Learning: PCA](scripts/01-hana-ml--PCA/02_PCA.ipynb)
+1. [Images similarity](scripts/02-images/02_02_queries.ipynb)
+1. [Word2Vec](scripts/03-word2vec/03_02_queries.ipynb)
+1. [Latent space](scripts/04-colors/04_02_latent_space.ipynb)
+1. [FAQ Search - documents](scripts/05-faq-search/05_02_py_faq_search_doc.ipynb)
+1. [FAQ Search - documents](scripts/05-faq-search/05_02_py_faq_search_chunks.ipynb)
+1. [FAQ Search - documents](scripts/05-faq-search/05_02_py_faq_search_chunks_rerank.ipynb)
+1. [Text processing in SAP HANA Cloud](scripts/06-NHTSA/06_03_text_processing.ipynb)
+1. [HANA Langchain - Q&A with SparQL](scripts/09-langchain-hana-kge/09_05_sap_hana_langchain_sparql_QA.ipynb)
 
 ## Known Issues
 Not known issues as of now.
