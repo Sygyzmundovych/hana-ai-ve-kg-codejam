@@ -144,18 +144,18 @@ Install:
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies using the following command:
 
     ```shell
-    python -m pip install --require-virtualenv -U 'hana-ml<2.29' 'python-dotenv' 'sqlalchemy-hana' 'jupysql' 'pandas<3'
+    python -m pip install --require-virtualenv -U 'hana-ml<2.29' 'python-dotenv' 'sqlalchemy-hana' 'jupysql' 'pandas<3' 'scikit-learn'
     ```
 
     > Just FYI: To use with the old `'ipython-sql'` instead of the new and supported `'jupysql'`, you would need to import `'prettytable<3.12'` to make it working properly:
     >    ```shell
-    >    python -m pip install --require-virtualenv -U 'hana-ml<2.28' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12'
+    >    python -m pip install --require-virtualenv -U 'hana-ml<2.28' 'python-dotenv' 'sqlalchemy-hana' 'ipython-sql' 'prettytable<3.12' 'scikit-learn'
     >    ```
 
 3. Install the [LangChain integration for SAP HANA Cloud](https://pypi.org/project/langchain-hana/) that integrates LangChain with SAP HANA Cloud to make use of vector search, knowledge graph, and further in-database capabilities as part of LLM-driven applications, plus the remaining required dependencies using the following command:
 
     ```shell
-    python -m pip install --require-virtualenv -U 'langchain-hana' 'Markdown' 'markdownify' 'webcolors' 'pillow'
+    python -m pip install --require-virtualenv -U 'langchain-hana' 'Markdown' 'markdownify' 'webcolors' 'pillow' 'sap-ai-sdk-gen[all]'
     ```
 
 ## [11/11] Open the "Check Setup" notebook from the exercises
