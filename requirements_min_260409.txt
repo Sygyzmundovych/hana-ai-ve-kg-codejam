@@ -16,3 +16,4 @@ scikit-learn==1.8.0
 sqlalchemy-hana==4.4.0
 tinycss2==1.4.0
 webcolors==25.10.0
+pandas<3
