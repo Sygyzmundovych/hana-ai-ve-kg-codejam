@@ -31,13 +31,13 @@ Setup:
 GenAI Fundamentals:
 
 1. [Check your setup](scripts/01-check_setup.ipynb)
-1. [HANA Embedded Machine Learning: PCA](scripts/02-hana-ml--PCA/)
-1. [Images similarity](scripts/03-images/)
-1. [Word2Vec (optional)](scripts/04-word2vec/)
-1. [Latent space (optional)](scripts/05-colors/)
-1. [FAQ Search - documents](scripts/06-faq-search/)
-1. [Text processing in SAP HANA Cloud (optional)](scripts/07-NHTSA/)
-1. [HANA Langchain integration - Q&A with SparQL](scripts/09-langchain-hana-kge/)
+1. [HANA Embedded Machine Learning: PCA](scripts/02-hana-ml--PCA/README.md)
+1. [Images similarity](scripts/03-images/README.md)
+1. [Word2Vec (optional)](scripts/04-word2vec/README.md)
+1. [Latent space (optional)](scripts/05-colors/README.md)
+1. [FAQ Search - documents](scripts/06-faq-search/README.md)
+1. [ANNS: Approximate Nearest Neighbor Search (optional)](scripts/07-NHTSA/README.md)
+1. [HANA Langchain integration - Q&A with SparQL](scripts/09-langchain-hana-kge/README.md)
 
 ## Known Issues
 Not known issues as of now.
