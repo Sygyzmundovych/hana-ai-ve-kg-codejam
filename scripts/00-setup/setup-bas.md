@@ -144,7 +144,7 @@ Install:
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies using the following command:
 
     ```shell
-    python -m pip install --require-virtualenv -U 'hana-ml<2.29' 'python-dotenv' 'sqlalchemy-hana' 'jupysql' 'pandas<3' 'scikit-learn'
+    python -m pip install --require-virtualenv -U 'hana-ml<2.30' 'python-dotenv' 'sqlalchemy-hana' 'jupysql' 'scikit-learn'
     ```
 
     > Just FYI: To use with the old `'ipython-sql'` instead of the new and maintained `'jupysql'`, you would need to import `'prettytable<3.12'` to make it working properly.
