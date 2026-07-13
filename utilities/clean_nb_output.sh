@@ -4,7 +4,7 @@
 # This is useful for version control, as it prevents merge conflicts due to changes in the output
 # The --inplace flag overwrites the original files
 
-find ./scripts -name "*.ipynb" -exec jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {} \;
+find ../scripts -name "*.ipynb" -exec jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace {} \;
 
 ## Above line executes both:
 # jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace ./scripts/*.ipynb
