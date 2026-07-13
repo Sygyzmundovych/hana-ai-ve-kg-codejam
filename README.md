@@ -1,4 +1,4 @@
-# CodeJam - Getting Started with AI (Vector Engine, NLP, Knowledge Graph[soon]) using SAP HANA and Python
+# CodeJam - Getting Started with AI (Vector Engine, NLP, GenAI hub, Knowledge Graph) using SAP HANA and Python
 
 This repository contains the material for the CodeJam on "Getting Started with AI (Vector Engine, NLP) using SAP HANA and Python".
 
