@@ -1,11 +1,14 @@
 # Setup SAP Business Application Studio and a dev space
 
 ## [1/11] Use SAP Business Technology Platform
-It is assumed that you have access to the SAP Business Technology Platform - either via your organization or via a free trial, as described in [prerequisites](../../prerequisites.md).
+It is assumed that you have access to the SAP Business Technology Platform provided by the SAP CodeJam organizers. Alternatively, via a free trial, as described in [prerequisites](../../prerequisites.md).
 
 If you are using SAP BTP Trial, then open it: https://hanatrial.ondemand.com/
 
 ## [2/11] Open SAP Business Application Studio
+
+You should be using the SAP Business Application Studio provided by the organizers.
+
 If you are using the [SAP BTP free trial](https://account.hanatrial.ondemand.com/trial/#/home/trial), then open [SAP Business Application Studio trial](https://triallink.us10.trial.applicationstudio.cloud.sap/) from the "Quick Tool Access" section.
 
 ![Open BAS Trial](img/setup0010.png)
@@ -144,7 +147,7 @@ Install:
 2. the [Python machine learning client for SAP HANA](https://pypi.org/project/hana-ml/) (`hana-ml`) and other required dependencies using the following command:
 
     ```shell
-    python -m pip install --require-virtualenv -U 'hana-ml<2.30' 'python-dotenv' 'sqlalchemy-hana' 'jupysql' 'scikit-learn'
+    python -m pip install --require-virtualenv -U 'hana-ai' 'hana-ml<2.31' 'python-dotenv' 'sqlalchemy-hana' 'jupysql' 'scikit-learn'
     ```
 
     > Just FYI: To use with the old `'ipython-sql'` instead of the new and maintained `'jupysql'`, you would need to import `'prettytable<3.12'` to make it working properly.
